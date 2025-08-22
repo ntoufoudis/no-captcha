@@ -56,5 +56,15 @@
     "format:test": "vendor/bin/pint -v --test",
     "test": "vendor/bin/pest",
     "test-coverage": "vendor/bin/pest --coverage"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ntoufoudis\\NoCaptcha\\NoCaptchaServiceProvider"
+      ],
+      "aliases": {
+        "NoCaptcha": "Ntoufoudis\\NoCpatcha\\Facades\\NoCaptcha"
+      }
+    }
   }
 }
