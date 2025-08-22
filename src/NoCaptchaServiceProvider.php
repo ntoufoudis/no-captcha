@@ -22,7 +22,7 @@ class NoCaptchaServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/config/captcha.php' => config_path('captcha.php'),
-        ], 'config');
+        ], 'no-captcha-config');
 
         $app['validator']->extend('captcha', function ($attribute, $value) use ($app) {
             return $app['captcha']->verifyResponse($value, $app['request']->getClientIp());

@@ -63,7 +63,7 @@
         "Ntoufoudis\\NoCaptcha\\NoCaptchaServiceProvider"
       ],
       "aliases": {
-        "NoCaptcha": "Ntoufoudis\\NoCpatcha\\Facades\\NoCaptcha"
+        "NoCaptcha": "Ntoufoudis\\NoCaptcha\\Facades\\NoCaptcha"
       }
     }
   }
