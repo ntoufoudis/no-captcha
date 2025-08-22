@@ -45,9 +45,9 @@ test('display Submit', function () {
     $simple = '<button data-callback="onSubmittest" data-sitekey="{site-key}" class="g-recaptcha"><span>submit</span></button>';
     $withAttrs = '<button data-theme="light" class="g-recaptcha 123" data-callback="onSubmittest" data-sitekey="{site-key}"><span>submit123</span></button>';
 
-    $this->assertEquals($simple . $javascript, $this->captcha->displaySubmit('test'));
-    $withAttrsResult = $this->captcha->displaySubmit('test','submit123',['data-theme' => 'light', 'class' => '123']);
-    $this->assertEquals($withAttrs . $javascript, $withAttrsResult);
+    $this->assertEquals($simple.$javascript, $this->captcha->displaySubmit('test'));
+    $withAttrsResult = $this->captcha->displaySubmit('test', 'submit123', ['data-theme' => 'light', 'class' => '123']);
+    $this->assertEquals($withAttrs.$javascript, $withAttrsResult);
 });
 
 test('display submit with custom callback', function () {
@@ -55,6 +55,7 @@ test('display submit with custom callback', function () {
 
     $withAttrs = '<button data-theme="light" class="g-recaptcha 123" data-callback="onSubmitCustomCallback" data-sitekey="{site-key}"><span>submit123</span></button>';
 
-    $withAttrsResult = $this->captcha->displaySubmit('test-custom','submit123',['data-theme' => 'light', 'class' => '123', 'data-callback' => 'onSubmitCustomCallback']);
+    $withAttrsResult = $this->captcha->displaySubmit('test-custom', 'submit123',
+        ['data-theme' => 'light', 'class' => '123', 'data-callback' => 'onSubmitCustomCallback']);
     $this->assertEquals($withAttrs, $withAttrsResult);
 });
