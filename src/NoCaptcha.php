@@ -108,7 +108,7 @@ class NoCaptcha
      *
      * @throws GuzzleException
      */
-    public function verifyResponse(string $response, string $clientIp = null): bool
+    public function verifyResponse(string $response, ?string $clientIp = null): bool
     {
         if (empty($response)) {
             return false;
@@ -179,7 +179,6 @@ class NoCaptcha
      * Send verify request.
      *
      * @param  string[]  $query
-     *
      * @return string[]
      *
      * @throws GuzzleException
@@ -197,7 +196,6 @@ class NoCaptcha
      * Prepare HTML attributes and assure that the correct classes and attributes for captcha are inserted.
      *
      * @param  string[]  $attributes
-     *
      * @return string[]
      */
     protected function prepareAttributes(array $attributes): array
